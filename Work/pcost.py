@@ -7,7 +7,6 @@ with open('Data/portfolio.csv', 'rt') as f:
     total_cost = 0
 
     headers = next(f)
-    print(headers)
 
     for line in f:
         line = line.strip().split(',')
