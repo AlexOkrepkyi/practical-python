@@ -10,11 +10,11 @@ def portfolio_cost(filename):
 
         for line in f:
             line = line.strip().replace('"', '').split(',')
-            company = (str(line[0]), int(line[1]), float(line[2]))
+            company = {'name': str(line[0]), 'shares': int(line[1]), 'price': float(line[2])}
             portfolio.append(company)
 
-        for title, shares, price in portfolio:
-            total_cost += shares * price
+        for element in portfolio:
+            total_cost += element['shares'] * element['price']
 
         return f'Portfolio --> {portfolio}\n' \
                f'Total cost --> {total_cost}'
