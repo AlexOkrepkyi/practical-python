@@ -42,7 +42,7 @@ def calculate_total_cost(filename: str) -> int:
 # print(f'Total cost: {calculate_total_cost("Data/portfolio.csv")}', end='\n')
 
 
-def read_current_prices(filename):
+def read_current_prices(filename: str) -> list:
     """
     Read a file with current stock prices into a list of dictionaries with the following keys:
     name, price
@@ -65,7 +65,7 @@ def read_current_prices(filename):
 # pprint(read_current_prices("Data/prices.csv"))
 
 
-def print_report(filename_portfolio, filename_current_prices):
+def print_report(filename_portfolio: str, filename_current_prices: str):
     """
     Print name, shares, price, change for the stock portfolio
     """
